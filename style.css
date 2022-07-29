@@ -21,9 +21,15 @@ body {
 .screen {
     background-color: darkolivegreen;
     height: 90px;
-    width: 320px;
+    width: 310px;
     border-radius: 10px;
     margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px black;
 }
 
 .pad {
@@ -44,9 +50,10 @@ button {
     border-radius: 10px;
     border: 2px solid black;
     font-size: 25px;
+    transition: all .1s ease;
 }
 
-.numbers button {
+.numbers button, [id="0"] {
     background-color: lightslategray;
     color: black;
 }
@@ -66,4 +73,9 @@ button {
 
 .large button{
     width: 260px;
+}
+
+.pressed {
+    filter: brightness(70%);
+    transform: scale(0.95);
 }
